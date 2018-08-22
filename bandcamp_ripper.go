@@ -11,12 +11,6 @@ import (
 	"regexp"
 )
 
-type AlbumData struct {
-	name   string
-	artist string
-	tracks []map[string]interface{}
-}
-
 const Debug = true
 const DirectoryFormat = "%s [%s] %s"
 const FileFormat = "%s. %s - %s.mp3"
