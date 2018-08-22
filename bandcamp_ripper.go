@@ -11,7 +11,7 @@ import (
 	"regexp"
 )
 
-const Debug = true
+const Debug = false
 const DirectoryFormat = "%s [%s] %s"
 const FileFormat = "%s. %s - %s.mp3"
 
@@ -133,7 +133,7 @@ func extractSubstring(s string, regex string) string {
 	r, _ := regexp.Compile(regex)
 	regexResult := r.FindStringSubmatch(s)
 	if len(regexResult) != 2 {
-		fmt.Printf("error: failed to extract substring (%s)\n", regex)
+		fmt.Printf("error: error parsing the page\n")
 		os.Exit(1)
 	}
 
